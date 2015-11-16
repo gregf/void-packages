@@ -1,0 +1,17 @@
+# Template file for 'png++'
+pkgname=png++
+version=0.2.9
+revision=1
+build_style=gnu-makefile
+makedepends="pkg-config libpng-devel"
+make_install_args="install PREFIX=/usr"
+short_desc="PNG++ aims to provide simple yet powerful C++ interface to libpng"
+maintainer="Greg Fitzgerald <gregf@voidlinux.eu>"
+license="BSD"
+homepage="http://www.nongnu.org/pngpp/"
+distfiles="http://download.savannah.gnu.org/releases/pngpp/${pkgname}-${version}.tar.gz"
+checksum=abbc6a0565122b6c402d61743451830b4faee6ece454601c5711e1c1b4238791
+
+post_install() {
+				vlicense COPYING
+}
